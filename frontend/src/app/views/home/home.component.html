@@ -3,7 +3,7 @@
 </header>
 
 <div class="container">
-    <form>
+    <form (submit)="false">
         <div class="campo-form">
             <label class="label-campo" for="nome">Nome da Receita</label>
             <input 
@@ -13,23 +13,29 @@
                 name="nome"
                 required
                 maxLength=200
+                [(ngModel)]="receita.titulo"
+                [ngModelOptions]="{standalone: true}"
             />
         </div>
         <div class="campo-form">
             <label class="label-campo" for="imagem">Imagem da Receita</label>
             <ckeditor
-            class="input-imagem" 
-            [editor]="Editor"  
-            [config]="{ 
-            toolbar: [ 'uploadImage' ,'|', 'undo', 'redo'],
-            language: 'pt-br'    
-            }">
+                class="input-imagem"
+                [(ngModel)]="receita.imagem"  
+                [ngModelOptions]="{standalone: true}"
+                [editor]="Editor"  
+                [config]="{ 
+                toolbar: [ 'uploadImage' ,'|', 'undo', 'redo'],
+                language: 'pt-br'    
+                }">
             </ckeditor>
         </div>
         <div class="campo-form">
             <label class="label-campo" for="imagem">Descrição da Receita</label>
             <ckeditor 
-            [editor]="Editor"  
+            [editor]="Editor"
+            [(ngModel)]="receita.descricao"
+            [ngModelOptions]="{standalone: true}"
             [config]="{ 
             toolbar: ['|', 'alignment', 'fontSize', 'fontColor', 
                     '|', 'bold', 'italic', 'underline', 'link', 
@@ -41,7 +47,7 @@
             </ckeditor>
         </div>
 
-        <button class="botao-cadastrar">Cadastrar Receita</button>
+        <button class="botao-cadastrar" (click)="cadastrarReceita()">Cadastrar Receita</button>
 
     </form>
 </div>

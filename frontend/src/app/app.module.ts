@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/home/home.component';
 
@@ -16,7 +18,8 @@ import { HomeComponent } from './views/home/home.component';
     BrowserModule,
     CKEditorModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
