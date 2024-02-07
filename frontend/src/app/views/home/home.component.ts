@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import * as ClassicEditor from '../../build/ckeditor';
 import '../../build/translations/pt-br.js'
 
@@ -12,8 +12,7 @@ import { isFormattedError } from '@angular/compiler';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
-  @ViewChild('myEditor') myEditor: any;
+export class HomeComponent{
 
   public Editor: any = ClassicEditor;
   public receita: Receita = {
@@ -28,12 +27,12 @@ export class HomeComponent {
   ) {}
 
   cadastrarReceita(): void{
-    console.log(this.receita)
-    console.log(this.extractBase64String())
-    //  this.receitaService.cadastrar(this.receita).subscribe(() => {
-      
-     // alert('Receita cadastrada!');
-    //})
+      this.extractBase64String();
+
+      this.receitaService.cadastrar(this.receita).subscribe(() => {
+      alert('Receita cadastrada!');
+      this.router.navigate(['/receitas']);
+    })
   }
 
   extractBase64String():void{

@@ -1,0 +1,14 @@
+<header class="header">
+    <h1>Receitas Salvas</h1>
+</header>
+
+<ul class="lista-receita">
+    <li class="item-receita" *ngFor="let receita of receitas" >
+            <div class="container-receita">
+                <a routerLink="/receitas:{{receita.id}}">
+                    <img src="{{receita.imagem}}" alt="" class="imagem-receita">
+                </a>
+                <span class="titulo-receita">{{receita.titulo}}</span>
+            </div>
+    </li>
+</ul>

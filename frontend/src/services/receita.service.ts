@@ -16,4 +16,13 @@ export class ReceitaService {
     return this.http.post<Receita>(this.baseUrl, receita);
   }
 
+  listar(): Observable<Receita[]> {
+    return this.http.get<Receita[]>(this.baseUrl);
+  }
+
+  listarId(id: string): Observable<Receita>{
+    const url = `${this.baseUrl}/${id}}`
+    return this.http.get<Receita>(url)
+  }
+
 }
