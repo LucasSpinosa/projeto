@@ -1,3 +1,7 @@
+.link-header{
+    text-decoration: none;
+}
+
 .header{
     color: white;
     background-color: cadetblue;

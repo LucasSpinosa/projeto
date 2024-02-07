@@ -21,7 +21,7 @@ export class ReceitaService {
   }
 
   listarId(id: string): Observable<Receita>{
-    const url = `${this.baseUrl}/${id}}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Receita>(url)
   }
 

@@ -30,8 +30,7 @@ export class HomeComponent{
       this.extractBase64String();
 
       this.receitaService.cadastrar(this.receita).subscribe(() => {
-      alert('Receita cadastrada!');
-      this.router.navigate(['/receitas']);
+        this.router.navigate(['/receitas']);
     })
   }
 

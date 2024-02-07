@@ -1,0 +1,16 @@
+<a href="/" class="link-header">
+    <header class="header">
+        <h1>Receita</h1>
+    </header>
+</a>
+
+<div class="container">
+    <h3 class="label-campo" for="nome">Nome da Receita</h3>
+    <span>{{receita.titulo}}</span>
+
+    <h3 class="label-campo">Imagem da Receita</h3>
+    <img src="{{receita.imagem}}" class="imagem-receita">
+        
+    <h3 class="label-campo">Descrição da Receita</h3>
+    <div [innerHTML]="receita.descricao"></div>
+</div>

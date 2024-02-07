@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './views/home/home.component';
 import { ReceitasComponent } from './views/receitas/receitas.component';
+import { ReceitaInfoComponent } from './views/receita-info/receita-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ReceitasComponent,
+    ReceitaInfoComponent,
   ],
   imports: [
     BrowserModule,
