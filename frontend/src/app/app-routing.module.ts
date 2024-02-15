@@ -6,8 +6,8 @@ import { ReceitaInfoComponent } from './views/receita-info/receita-info.componen
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'receitas', component: ReceitasComponent },
-  { path: 'receita/:id', component: ReceitaInfoComponent },
+  { path: 'noticias', component: ReceitasComponent },
+  { path: 'noticia/:id', component: ReceitaInfoComponent },
 ];
 
 @NgModule({
