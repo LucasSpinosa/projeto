@@ -1,13 +1,13 @@
 <a href="/" class="link-header">
     <header class="header">
-        <h1>Cadastrar Receita</h1>
+        <h1>Cadastrar Notícia</h1>
     </header>
 </a>
 
 <div class="container">
     <form (submit)="false">
         <div class="campo-form">
-            <label class="label-campo" for="nome">Nome da Receita</label>
+            <label class="label-campo" for="nome">Título da Notícia</label>
             <input 
                 class="input-nome" 
                 type="text" 
@@ -20,7 +20,7 @@
             />
         </div>
         <div class="campo-form">
-            <label class="label-campo" for="imagem">Imagem da Receita</label>
+            <label class="label-campo" for="imagem">Imagem da Notícia</label>
             <ckeditor
                 class="input-imagem"
                 [(ngModel)]="receita.imagem"  
@@ -33,7 +33,7 @@
             </ckeditor>
         </div>
         <div class="campo-form">
-            <label class="label-campo" for="imagem">Descrição da Receita</label>
+            <label class="label-campo" for="imagem">Conteúdo da Notícia</label>
             <ckeditor 
             [editor]="Editor"
             [(ngModel)]="receita.descricao"
@@ -50,7 +50,7 @@
             </ckeditor>
         </div>
 
-        <button class="botao-cadastrar" (click)="cadastrarReceita()">Cadastrar Receita</button>
+        <button class="botao-cadastrar" (click)="cadastrarReceita()">Cadastrar Notícia</button>
 
     </form>
 </div>
